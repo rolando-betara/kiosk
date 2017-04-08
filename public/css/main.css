@@ -1,0 +1,33 @@
+body{
+    background-color: #38b1b7;
+}
+.verticalAlign {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);			
+}
+#idSearch {
+    color: #fff;
+}
+.m-t {
+    margin-top: 10px;
+}
+.btn.btn-success.btn-on{
+    background-color: #fff;
+    color: #5cb85c;
+}
+.btn.btn-success.btn-on.active{
+    background-color: #5cb85c;
+    color:#fff;
+}
+.margin-zero{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.margin-top {
+    margin-top: 70px;
+}
