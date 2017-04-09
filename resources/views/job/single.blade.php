@@ -17,9 +17,7 @@
                     <small>{{$item->created_at->diffforHumans()}}</small>
                 </div>
             <h5>Job Requirements</h5>
-            <div class="well well-sm">
-                {{$item->job_requirements}}
-            </div>
+            <pre>{{$item->job_requirements}}</pre>
         </div>
     </div>
 @endsection
