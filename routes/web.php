@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::resource('/admin', 'DashboardController');
 Route::resource('/job', 'JobsController');
+Route::get('/job', 'JobsController@search');

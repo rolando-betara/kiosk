@@ -1,15 +1,18 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="verticalAlign">
-	  	<div class="input-group">
-		  <input class="input-group-field" type="text" placeholder="Search Job Title">
-		  <div class="input-group-button">
-		    <input type="submit" class="button warning" id="idSearch" value="Search">
-		  </div>
-		</div>
-		<div class="row">
-			<small></small>
-		</div>
-  	</div>
+  <div class="verticalAlign ">
+		<form method="GET" action="/job">
+		
+			<div class="input-group input-group-lg">
+				<input type="text" name="search" class="form-control" placeholder="Job Position">
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-success">Search</button>
+				</span>
+			</div>
+		</form>
+		<ol class="breadcrumb bread-bg">
+			<li><a href="/job">View All</a></li>
+		</ol>
+	</div>
 @endsection

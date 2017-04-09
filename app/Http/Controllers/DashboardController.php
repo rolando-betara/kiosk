@@ -14,7 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $jobs= job::limit(2)->latest()->get();
+        $jobs = job::limit(10)->latest()->get();
         return view('admin.index', compact('jobs'));
     }
 

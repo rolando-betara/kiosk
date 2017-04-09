@@ -1,4 +1,4 @@
-body{
+body, .bread-bg{
     background-color: #38b1b7;
 }
 .verticalAlign {
@@ -30,4 +30,22 @@ body{
 }
 .margin-top {
     margin-top: 70px;
+}
+.navbar-default .navbar-brand.brand-color{
+    color: #38b1b7;
+}
+.bg-color{
+    background-color: #38b1b7;
+    color: #fff;
+    border-radius:0px; 
+}
+.ls-gp{
+    padding: 0px;
+    border: none;
+}
+.padding-none {
+    padding: 0px;
+}
+.bread-bg a{
+    color:#fff;
 }

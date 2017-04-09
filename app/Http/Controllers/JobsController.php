@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\job;
 
 class JobsController extends Controller
@@ -14,9 +15,17 @@ class JobsController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = job::latest()->paginate(15);
+        return  view('job.index', compact('jobs'));
     }
 
+    public function search(Request $request){
+
+        $search = $request->input('search');
+
+         $jobs = job::where('job_position', 'LIKE', "%$search%" )->latest()->paginate(15);
+        return  view('job.index', compact('jobs'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -47,7 +56,7 @@ class JobsController extends Controller
     public function show($id)
     {
         $item = job::find($id);
-        return  view('job.index', compact('item'));
+        return  view('job.single', compact('item'));
     }
 
     /**
