@@ -12,6 +12,7 @@
                          <li class="{{ Request::is('admin/create') ? 'active' : '' }}"><a href="{{ url('/admin/create') }}">Add Job</a></li>
                          <li class="{{ Request::is('admin/edit') ? 'active' : '' }}"><a href="">Edit Job</a></li>
                          <li class="{{ Request::is('admin/delete') ? 'active' : '' }}"><a href="">Delete Job</a></li>
+                         <li class="{{ Request::is('settings') ? 'active' : '' }}"><a href="{{ url('/settings') }}">Settings</a></li>
                        </ul>
                     </div>
                 </div>

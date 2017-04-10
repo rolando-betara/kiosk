@@ -3,22 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\job;
 
-class DashboardController extends Controller
+class SettingController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    
-
     public function index()
     {
-        $jobs = job::limit(10)->latest()->get();
-        return view('admin.index', compact('jobs'));
+        return view('setting.index');
     }
 
     /**
@@ -28,7 +23,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        //
     }
 
     /**
@@ -39,18 +34,7 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        $job = new job;
-        $job->company_name = $request->c_name;
-        $job->company_address = $request->c_fulladd;
-        $job->company_contact_number = $request->c_contact;
-        $job->company_email = $request->c_email;
-        $job->job_position = $request->job_postion;
-        $job->job_requirements = $request->job_req;
-        $job->job_status = $request->options;
-        $job->save();
-        
-        return redirect('admin/create')->with('status', 'New job is posted!');;
-
+        //
     }
 
     /**

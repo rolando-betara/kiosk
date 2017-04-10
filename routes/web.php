@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Route::resource('/admin', 'DashboardController');
 Route::resource('/job', 'JobsController');
+Route::resource('/settings', 'SettingController');
 Route::get('/job', 'JobsController@search');
+Route::get('/login', 'LoginController@index');
