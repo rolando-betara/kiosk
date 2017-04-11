@@ -6,7 +6,8 @@
    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <form class="form-horizontal" action='' method="POST">
+                <form class="form-horizontal" action='/settings' method="POST">
+                {{ csrf_field() }}
                     <fieldset>
                         <div id="legend">
                             <legend class="">Create User Account</legend>
@@ -22,7 +23,7 @@
                         <div class="control-group">
                             <label class="control-label" for="fullname">Full name</label>
                             <div class="controls">
-                                <input type="text" id="fullname" name="text" placeholder="" class="form-control input-xlarge">
+                                <input type="text" id="fullname" name="fullname" placeholder="" class="form-control input-xlarge">
                             </div>
                         </div>
                     

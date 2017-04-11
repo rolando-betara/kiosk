@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\account;
 
 class SettingController extends Controller
 {
@@ -34,7 +35,13 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newaccount = new account;
+        $newaccount->username   = $request->username;
+        $newaccount->full_name  = $request->fullname;
+        $newaccount->password   = bcrypt($request->password_confirm);
+        $newaccount->save();
+        
+        return redirect('settings');
     }
 
     /**
