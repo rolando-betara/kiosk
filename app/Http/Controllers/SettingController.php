@@ -35,7 +35,14 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'username' => 'required',
+            'fullname' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+
         $newaccount = new account;
+        
         $newaccount->username   = $request->username;
         $newaccount->full_name  = $request->fullname;
         $newaccount->password   = bcrypt($request->password_confirm);

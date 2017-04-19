@@ -37,7 +37,7 @@
                         <div class="control-group">
                             <label class="control-label"  for="password_confirm">Password (Confirm)</label>
                             <div class="controls">
-                                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-xlarge">
+                                <input type="password" id="password_confirm" name="password_confirmation" placeholder="" class="form-control input-xlarge">
                             </div>
                         </div>
                         <br>
@@ -48,8 +48,21 @@
                         </div>
                     </fieldset>
                 </form>
+                <br>
+                
             </div>
             <div class="col-md-9"></div>
         </div>
+
+        <ul class="list-group">
+            @if(count($errors)>0)
+                
+                    @foreach($errors->all() as $error)
+                        <li class="list-group-item alert alert-warning"> {{$error}}</li>
+                    @endforeach
+                
+            @endif
+        </ul>
+       
    </div>
 @endsection
